@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Torre Reforma AR</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #222;
+    }
+    .ar-button {
+      display: inline-block;
+      margin: 20px;
+      padding: 15px 30px;
+      background-color: #007aff;
+      color: white;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    .model-viewer {
+      width: 100%;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+  </style>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <h1>Torre Reforma en Realidad Aumentada</h1>
+
+  <!-- Enlace para AR en iPhone con .usdz -->
+  <a href="torre_reforma.usdz" rel="ar" class="ar-button">Ver en AR (iPhone - .usdz)</a>
+
+  <!-- Visor web + AR para Android con .glb -->
+  <model-viewer class="model-viewer"
+    src="torre_reforma.glb"
+    ar
+    ar-modes="scene-viewer webxr quick-look"
+    camera-controls
+    auto-rotate
+    alt="Torre Reforma">
+  </model-viewer>
+</body>
+</html>
